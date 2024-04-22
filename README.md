@@ -19,7 +19,7 @@ Before running the application, ensure you have the following dependencies insta
 
 1. **Clone the Repository**
 
-   Clone this repository to your local machine using:
+   Clone this repository to your local machine
 
 2. **Run the Flask Application**
 
