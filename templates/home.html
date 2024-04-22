@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Diseases Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <header>
+        
+        <div class="container">
+            <img src="{{ url_for('static', filename='css/logo.jpg') }}" alt="Background Image" class="log">
+            <h1>Diseases Prediction</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('heartdisease') }}">Heart</a></li>
+                    <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <img src="{{ url_for('static', filename='css/background.jpg') }}" alt="Background Image" style="width: 100%; height: auto; display: block; margin-top: 70px;">
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to our Diseases Prediction</h2>
+            <p>Our Disease Prediction utilize machine learning to process user data and provide predictions about potential diseases</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="feature">
+                <h3>Heart Disease Prediction</h3>
+                <p>Click on "Heart" page  and add the corresponding details and click on predict to learn wether the patient is at the risk of this disease.</p>
+            </div>
+            <div class="feature">
+                <h3>Diabetes Prediction</h3>
+                <p>Click on "Diabetes" page  and add the corresponding details and click on predict to learn wether the patient is at the risk of this disease.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Diseases Prediction. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

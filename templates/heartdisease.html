@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartDisease | Diseases Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/heartdisease.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="{{ url_for('static', filename='css/logo.jpg') }}" alt="Background Image" class="log">
+            <h1>Diseases Prediction</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('heartdisease') }}">Heart</a></li>
+                    <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <img src="{{ url_for('static', filename='css/background.jpg') }}" alt="Background Image" style="width: 100%; height: auto; display: block; margin-top: 70px;">
+    
+    <center>
+        <h1><br/>Heart Disease Prediction<br/><br/></h1>
+        <div class="form-style-3">
+        <form action="{{url_for('predictheartdisease')}}" method="post">
+        <fieldset><legend>Please provide the details carefully to ensure accurate results</legend>
+        <label for="field1"><span>age </span></span><input type="number" step="0.00000000000001" placeholder="age" class="input-field" name="field1" required="required" value="" /></label>
+        <label for="field2"><span>sex </span></span><input type="number" step="0.00000000000001" placeholder="input 0 for female, 1 for male" class="input-field" name="field2" required="required" value="" /></label>
+        <label for="field3"><span>cp </span></span><input type="number" step="0.00000000000001" placeholder="input either 0, 1 , 2, or 3" class="input-field" name="field3" required="required" value="" /></label>
+        <label for="field4"><span>trestbps</span></span><input type="number" step="0.00000000000001" placeholder="input between 94-200" class="input-field" name="field4" required="required" value="" /></label>
+        <label for="field5"><span>chol </span></span><input type="number" step="0.00000000000001" placeholder="input between 126-564" class="input-field" name="field5" required="required" value="" /></label>
+        <label for="field6"><span>fbs </span></span><input type="number" step="0.00000000000001" placeholder="input either 0 or 1" class="input-field" name="field6" required="required" value="" /></label>
+        <label for="field7"><span>restecg</span></span><input type="number" step="0.00000000000001" placeholder="input either 0, 1, or 2" class="input-field" name="field7" required="required" value="" /></label>
+        <label for="field8"><span>thalach</span></span><input type="number" step="0.00000000000001" placeholder="input between 71-202" class="input-field" name="field8" required="required" value="" /></label>
+        <label for="field9"><span>exang</span></span><input type="number" step="0.00000000000001" placeholder="input either 0 or 1" class="input-field" name="field9" required="required" value="" /></label>
+        <label for="field10"><span>oldpeak </span></span><input type="number" step="0.00000000000001" placeholder="input between 0-6.20" class="input-field" name="field10" required="required" value="" /></label>
+        <label for="field11"><span>slope </span></span><input type="number" step="0.00000000000001" placeholder="input either 0, 1, or 2" class="input-field" name="field11" required="required" value="" /></label>
+        <label for="field12"><span>ca </span></span><input type="number" step="0.00000000000001" placeholder="input either 0, 1, 2, 3, or 4" class="input-field" name="field12" required="required" value="" /></label>
+        <label for="field13"><span>thal </span></span><input type="number" step="0.00000000000001" placeholder="input either 0, 1 , 2, or 3" class="input-field" name="field13" required="required" value="" /></label>
+        
+        <label><span> </span><input type="submit" value="Predict" /></label>
+        
+        
+        </form>
+        <h2>{{output_text}}</h2>
+        </div>
+    </center>  
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Diseases Prediction. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

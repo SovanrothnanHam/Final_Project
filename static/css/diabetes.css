@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+  }
+.log {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    float: left; /* or display: inline-block; */
+  }
+  
+  header {
+    background-color: #98C9CB;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right; /* Aligning the text to the right */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15%;
+  }
+  
+  header h1 {
+    margin: 0;
+    text-align: left; 
+  }
+  
+  ul {
+    position: absolute;
+    top: 50%;
+    left:60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  ul li{
+    list-style-type: none;
+  }
+  ul li a{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  ul li a:before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* border-top: 2px solid rgb(53, 163, 175); */
+    border-bottom: 2px solid rgb(53, 163, 175);
+    transform: scaleY(2);
+    opacity: 0; transition: 0.3s;
+  }
+  ul li a:after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* background-color: rgb(105, 175, 105); */
+    transform: scale(0);
+    opacity: 0; transition: 0.3s;
+    z-index: 1;
+  }
+  ul li a:hover{
+    color: black;
+  }
+  ul li a:hover:before{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  ul li a:hover:after{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  .form-style-3{
+    max-width: 900px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+  }
+  .form-style-3 label > span{
+    float: left;
+    width: 350px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px rgb(48, 11, 11);
+  }
+  .form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid black;
+    padding: 20px;
+    background:  #98C9CB;
+    box-shadow: inset 0px 0px 15px rgb(48, 11, 11);
+    -moz-box-shadow: inset 0px 0px 15px rgb(48, 11, 11);
+    -webkit-box-shadow: inset 0px 0px 15px rgb(48, 11, 11);
+  }
+  
+  .form-style-3 fieldset legend{
+    color: black;
+    border-top: 1px solid rgb(48, 11, 11);
+    border-left: 1px solid rgb(48, 11, 11);
+    border-right: 1px solid rgb(48, 11, 11);
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: white;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 25px;
+  }
+  .form-style-3 textarea{
+    width:250px;
+    height:100px;
+  }
+  .form-style-3 input[type=text],
+  .form-style-3 input[type=number],
+  .form-style-3 select, 
+  .form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #121211;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: white;
+    width:50%;
+  }
+  .form-style-3  input[type=submit],
+  .form-style-3  input[type=button]{
+    background: black;
+    border: 3px solid #0d0d0d;
+    padding: 15px 25px 15px 25px;
+    color: #fff;
+    box-shadow: inset -1px -1px 3px rgb(48, 11, 11);
+    -moz-box-shadow: inset -1px -1px 3px rgb(48, 11, 11);
+    -webkit-box-shadow: inset -1px -1px 3px rgb(48, 11, 11);
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;	
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  footer {
+    background-color: #98C9CB;
+    color: #fff;
+    text-align: center;
+    padding: 0 0;
+}
